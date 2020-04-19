@@ -1,0 +1,17 @@
+@startuml
+interface StrategyInterface {
+  exe()
+} 
+
+StrategyA : exe()
+StrategyB : exe()
+
+StrategyInterface <|.. StrategyA
+StrategyInterface <|.. StrategyB
+
+
+StrategyA <|-- StrategyContextA
+StrategyB <|-- StrategyContextB
+
+@enduml
+
