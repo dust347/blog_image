@@ -1,0 +1,17 @@
+@startuml
+Class Product
+
+Interface Factory {
++ createProduct() : Product
+}
+
+Class ConcreteFactor {
++ createProduct() : Product
+}
+
+Factory <|.. ConcreteFactor
+
+Product <.. ConcreteFactor
+
+@enduml
+
