@@ -1,0 +1,31 @@
+@startuml
+Interface Command {
++ execute()
+}
+
+Class Receiver {
++ action()
+}
+
+Class ConcreteCommand {
++ execute()
+}
+
+Class Invoker{
+
+}
+
+Class Client {
+
+}
+
+Command <|.. ConcreteCommand
+
+Invoker o-- Command
+
+Receiver <-- ConcreteCommand
+
+Receiver <-- Client
+
+ConcreteCommand <.. Client
+@enduml
